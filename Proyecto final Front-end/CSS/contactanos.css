@@ -1,0 +1,168 @@
+/* Estilo general para el body, inputs y textarea */
+body, input, textarea {
+  font-family: 'Arial', sans-serif; /* Establece la fuente Arial para el cuerpo y los campos de entrada */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+  color: #333; /* Define el color del texto en gris oscuro */
+}
+
+.logo-container {
+  display: flex; /* Alinea el logo y el título en una fila */
+  align-items: center; /* Centra verticalmente el logo y el título */
+  padding-left: 20px; /* Añade un poco de espacio a la izquierda */
+  margin-bottom: -65px; /* Ajusta el margen inferior para acercar al navbar */
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 80px; /* Mantiene el ancho del logo */
+  border-radius: 50%; /* Logo circular */
+  border: 2px solid #000; /* Borde negro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-right: 15px; /* Espacio entre el logo y el título */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Efecto de hover en el logo */
+}
+/* Barra de navegación */
+.navbar {
+  width: 100%; /* Hace que la barra ocupe el 100% del ancho */
+  background-color: #555; /* Define un color de fondo gris oscuro */
+  overflow: auto; /* Permite que los elementos internos no se desborden */
+  border-radius: 5px; /* Redondea las esquinas de la barra de navegación */
+}
+
+/* Estilo de los enlaces dentro de la barra de navegación */
+.navbar a {
+  float: right; /* Coloca los enlaces alineados a la derecha */
+  padding: 25px; /* Añade padding alrededor de los enlaces */
+  color: white; /* Define el color de texto blanco */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  font-size: 15px; /* Establece el tamaño de la fuente */
+}
+
+/* Efecto hover para los enlaces de la barra de navegación */
+.navbar a:hover {
+  background-color: #000; /* Cambia el color de fondo a negro cuando se pasa el mouse */
+}
+
+/* Clase activa para el enlace de la barra de navegación */
+.active {
+  background-color: #04AA6D; /* Cambia el fondo a verde cuando el enlace está activo */
+}
+
+/* Estilos responsivos para pantallas de máximo 768px */
+@media (max-width: 768px) {
+  /* Centrar los enlaces de navegación y alinearlos verticalmente */
+  .navbar {
+    text-align: center; /* Centra los enlaces */
+  }
+
+  .navbar a {
+    float: none; /* Elimina el flotado de los enlaces */
+    display: block; /* Hace que los enlaces se apilen verticalmente */
+    padding: 15px; /* Ajusta el padding alrededor de los enlaces */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+  }
+
+  /* Ajuste para el logo en pantallas medianas */
+  .logo {
+    position: absolute;
+    left: 20px; /* Coloca el logo en la parte superior izquierda */
+    top: 15px; /* Ajusta la posición vertical */
+    transform: none; /* Elimina la transformación de escala */
+    width: 60px; /* Reduce el tamaño del logo */
+  }
+}
+
+/* Estilos responsivos para pantallas de máximo 480px */
+@media (max-width: 480px) {
+  /* Ajuste de los enlaces para pantallas más pequeñas */
+  .navbar a {
+    padding: 10px; /* Reduce el padding */
+    font-size: 12px; /* Reduce aún más el tamaño de la fuente */
+  }
+
+  /* Ajuste para el logo en pantallas muy pequeñas */
+  .logo {
+    width: 50px; /* Reduce aún más el tamaño del logo */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+  }
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+  margin: 50px; /* Añade un margen alrededor de la sección */
+  padding: 20px; /* Añade padding interno */
+  border-radius: 5px; /* Redondea las esquinas */
+  background-color: #f2f2f2; /* Establece un color de fondo gris claro */
+  max-width: 600px; /* Define un ancho máximo de 600px */
+  margin-left: auto; /* Centra la sección horizontalmente */
+  margin-right: auto; /* Centra la sección horizontalmente */
+}
+
+/* Estilo para el título de la sección de contacto */
+.contact-section h2 {
+  text-align: center; /* Centra el título */
+  color: #333; /* Establece el color del texto en gris oscuro */
+}
+
+/* Estilos para el formulario de contacto */
+form {
+  display: flex; /* Utiliza el modelo de caja flexible */
+  flex-direction: column; /* Organiza los elementos del formulario en una columna */
+}
+
+/* Estilos para las etiquetas del formulario */
+label {
+  margin-bottom: 10px; /* Añade espacio debajo de las etiquetas */
+  font-weight: bold; /* Hace que las etiquetas sean en negrita */
+  color: #333; /* Establece el color del texto en gris oscuro */
+}
+
+/* Estilos para los campos de entrada y textarea */
+input, textarea {
+  margin-bottom: 20px; /* Añade margen inferior */
+  padding: 10px; /* Añade padding interno */
+  border-radius: 5px; /* Redondea las esquinas */
+  border: 1px solid #ccc; /* Añade un borde gris claro */
+  font-size: 16px; /* Establece el tamaño de la fuente */
+}
+
+/* Estilos para el botón de envío */
+button {
+  padding: 15px; /* Añade padding alrededor del botón */
+  background-color: #04AA6D; /* Establece un color de fondo verde */
+  color: white; /* Define el color del texto en blanco */
+  border: none; /* Elimina el borde por defecto */
+  border-radius: 5px; /* Redondea las esquinas */
+  font-size: 16px; /* Establece el tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+/* Efecto hover para el botón */
+button:hover {
+  background-color: #037d55; /* Cambia el color de fondo cuando se pasa el mouse */
+}
+
+/* Estilo para el mensaje de confirmación */
+#confirmationMessage {
+  font-size: 16px; /* Establece el tamaño de la fuente */
+}
+
+/* Estilos para el pie de página */
+footer {
+  padding: 25px 10px; /* Añade padding alrededor del pie de página */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto */
+  background-color: #555; /* Establece un color de fondo gris oscuro */
+  color: #fff; /* Establece el color del texto en blanco */
+  overflow: auto; /* Permite que los elementos internos no se desborden */
+  width: 100%; /* Hace que el pie de página ocupe todo el ancho disponible */
+  float: inline-end; /* Alinea el pie de página al final */
+  margin-top: auto; /* Asegura que el pie de página se mantenga en la parte inferior */
+}

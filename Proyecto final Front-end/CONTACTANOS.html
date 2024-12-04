@@ -1,0 +1,57 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento como HTML5 -->
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+  <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8, que soporta caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva, adaptándose a diferentes tamaños de pantalla -->
+  <title>Contactanos</title> <!-- Define el título de la página, que se muestra en la pestaña del navegador -->
+  <link rel="icon" type="image/x-icon" href="./IMAGES/Logo-imagen-removebg-preview.png"> <!-- Enlaza el icono de la página que aparecerá en la pestaña del navegador -->
+  <link rel="stylesheet" href="./CSS/contactanos.css"> <!-- Enlaza el archivo CSS que contiene el diseño de la página -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Enlaza la librería Font Awesome para iconos -->
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="IMAGES/Logo-imagen.png" alt="Logo" class="logo"> <!-- Muestra el logo de la página -->
+    </div>
+  </header>
+
+  <div class="navbar">
+    <!-- Barra de navegación con enlaces a otras secciones de la página -->
+    <a class="active" href="../CONTACTANOS.html"><i class="fa fa-phone"></i> Contáctanos</a> <!-- Enlace a la sección de contacto, con un ícono de teléfono -->
+    <a href="../ABOUT-US.html"><i class="fa fa-users"></i> Sobre nosotros</a> <!-- Enlace a la sección "Sobre nosotros", con un ícono de usuarios -->
+    <a href="../PERSONAJES.html"><i class="fa fa-address-card"></i> Sobre los personajes</a> <!-- Enlace a la sección de personajes, con un ícono de tarjeta de presentación -->
+    <a href="../NOVELA.html"><i class="fa fa-book"></i> Avance de la novela</a> <!-- Enlace a la sección de la novela, con un ícono de libro -->
+    <a href="../INDEX.html"><i class="fa fa-fw fa-home"></i> Inicio</a> <!-- Enlace a la página principal, con un ícono de casa -->
+  </div>
+
+  <section class="contact-section">
+    <h2>Contáctanos</h2> <!-- Título de la sección de contacto -->
+    <form id="contactForm"> <!-- Formulario de contacto con campos para ingresar información -->
+      <label for="name">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+      <input type="text" id="name" name="name" required> <!-- Campo de texto para ingresar el nombre, es obligatorio -->
+      
+      <label for="email">Correo Electrónico:</label> <!-- Etiqueta para el campo de correo electrónico -->
+      <input type="email" id="email" name="email" required> <!-- Campo de correo electrónico, obligatorio -->
+      
+      <label for="message">Mensaje:</label> <!-- Etiqueta para el campo de mensaje -->
+      <textarea id="message" name="message" rows="5" required></textarea> <!-- Campo de texto para el mensaje, obligatorio -->
+      
+      <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+    </form>
+
+    <!-- Mensaje de confirmación que aparece después de enviar el formulario -->
+    <div id="confirmationMessage" style="display:none; color: green; margin-top: 20px;">
+      ¡Gracias por contactarnos! Su respuesta llegará muy pronto.
+    </div>
+  </section>
+
+  <footer>
+    <!-- Pie de página con derechos de autor y créditos del logo -->
+    <p>&copy; 2024 [Las Leyendas de Borinquen.] Todos los derechos reservados.
+        Logo generado con BrandCrowd.
+    </p>
+  </footer>
+
+  <script src="../JS/ContactoJS.js"></script> <!-- Enlaza un archivo JavaScript para manejar la lógica del formulario de contacto -->
+</body>
+</html>

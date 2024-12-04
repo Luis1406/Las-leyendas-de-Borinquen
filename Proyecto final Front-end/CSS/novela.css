@@ -1,0 +1,211 @@
+/* Reset de márgenes y padding para todos los elementos */
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif; /* Establece una fuente estándar para la página */
+}
+
+.logo-container {
+	display: flex; /* Alinea el logo y el título en una fila */
+	align-items: center; /* Centra verticalmente el logo y el título */
+	padding-left: 20px; /* Añade un poco de espacio a la izquierda */
+	margin-bottom: -65px; /* Ajusta el margen inferior para acercar al navbar */
+  }
+  
+  /* Estilo para el logo */
+  .logo {
+	width: 80px; /* Mantiene el ancho del logo */
+	border-radius: 50%; /* Logo circular */
+	border: 2px solid #000; /* Borde negro */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+	margin-right: 15px; /* Espacio entre el logo y el título */
+	transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  .logo:hover {
+	transform: scale(1.1); /* Efecto de hover en el logo */
+  }
+  
+  
+
+/* Estilos para la barra de navegación */
+.navbar {
+	width: 100%; /* La barra de navegación ocupa todo el ancho */
+	background-color: #555; /* Fondo gris */
+	overflow: auto; /* Asegura que los enlaces se ajusten si no caben */
+	border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para los enlaces dentro de la barra de navegación */
+.navbar a {
+	float: right; /* Los enlaces se alinean a la derecha */
+	padding: 25px; /* Espaciado alrededor de los enlaces */
+	color: white; /* Texto en blanco */
+	text-decoration: none; /* Elimina el subrayado de los enlaces */
+	font-size: 15px; /* Establece el tamaño de fuente */
+}
+
+/* Estilo para los enlaces al pasar el mouse sobre ellos */
+.navbar a:hover {
+	background-color: #000; /* Cambia el fondo a negro al hacer hover */
+}
+
+/* Estilo para el enlace activo en la barra de navegación */
+.active {
+	background-color: #04AA6D; /* Fondo verde para el enlace activo */
+}
+
+/* Diseño responsivo para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+	/* Centra los enlaces de navegación y los apila verticalmente */
+	.navbar {
+	  text-align: center; /* Centra el texto */
+	}
+
+	.navbar a {
+	  float: none; /* Elimina el flotado de los enlaces */
+	  display: block; /* Apila los enlaces */
+	  padding: 15px; /* Ajusta el espaciado */
+	  font-size: 14px; /* Reduce el tamaño de la fuente */
+	}
+
+	/* Ajusta el tamaño y la posición del logo */
+	.logo {
+	  position: absolute;
+	  left: 20px; /* Coloca el logo a 20px del borde izquierdo */
+	  top: 15px; /* Coloca el logo a 15px del borde superior */
+	  transform: none; /* Elimina la transformación */
+	  width: 60px; /* Reduce el tamaño del logo */
+	}
+}
+
+/* Diseño responsivo para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+	/* Ajusta el tamaño de los enlaces */
+	.navbar a {
+	  padding: 10px; /* Reduce el padding */
+	  font-size: 12px; /* Reduce aún más el tamaño de la fuente */
+	}
+
+	/* Ajusta el tamaño del logo para pantallas muy pequeñas */
+	.logo {
+	  width: 50px; /* Reduce el tamaño del logo */
+	  left: 10px; /* Ajusta la distancia del logo al borde izquierdo */
+	}
+}
+
+/* Estilos para los párrafos */
+p {
+	margin-top: 10px; /* Agrega espacio arriba */
+	font-size: 13px; /* Establece el tamaño de la fuente */
+	text-align: justify; /* Justifica el texto */
+	line-height: 1.5; /* Establece el interlineado */
+	padding-bottom: 20px; /* Agrega espacio en la parte inferior */
+}
+
+/* Contenedores principales para el contenido del libro */
+.container, .book-content {
+	display: flex; /* Usando flexbox para el diseño */
+	justify-content: center; /* Centra el contenido horizontalmente */
+	align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+	width: 100%; /* Ancho completo */
+	height: 100vh; /* Altura completa de la ventana */
+	background: #d4d4d4; /* Fondo gris claro */
+}
+
+/* Estilo para el contenedor de contenido del libro */
+.book-content {
+	width: 65%; /* 65% del ancho de la ventana */
+	min-width: 250px; /* Ancho mínimo de 250px */
+	max-width: 600px; /* Ancho máximo de 600px */
+	height: 500px; /* Altura de 500px */
+	position: relative; /* Posición relativa para los efectos de 3D */
+	perspective: 1000px; /* Perspectiva para los efectos 3D */
+	transition: 1s; /* Transición suave */
+}
+
+/* Estilo para el "libro" en sí */
+.book {
+	position: absolute; /* Posición absoluta dentro del contenedor */
+	width: 65%; /* Ancho del libro */
+	height: 100%; /* Altura completa */
+	transition: 1s; /* Transición suave */
+	transform-style: preserve-3d; /* Habilita el 3D para las caras del libro */
+	transform-origin: left; /* El libro gira desde la izquierda */
+}
+
+/* Estilo para las caras del libro */
+.face-front, .face-back {
+	width: 100%; /* Ancho completo */
+	height: 100%; /* Altura completa */
+	background: white; /* Fondo blanco */
+	padding: 15px; /* Espaciado interno */
+	box-sizing: border-box; /* Incluye el padding en el tamaño total */
+	overflow: hidden; /* Elimina el desbordamiento */
+}
+
+/* Estilo para la cara frontal del libro */
+.face-front {
+	box-shadow: inset 3px 0px 20px -7px black; /* Sombra interna a la izquierda */
+	border-top-left-radius: 3px; /* Bordes redondeados en la parte superior izquierda */
+	border-bottom-left-radius: 3px; /* Bordes redondeados en la parte inferior izquierda */
+}
+
+/* Estilo para la cara trasera del libro */
+.face-back {
+	position: absolute; /* Posición absoluta */
+	top: 0; /* Coloca en la parte superior */
+	left: 0; /* Coloca a la izquierda */
+	transform: translateZ(-1px) rotateY(180deg); /* Rota la cara para crear el efecto 3D */
+	box-shadow: inset -3px 1px 20px -7px black; /* Sombra interna a la derecha */
+	border-top-right-radius: 3px; /* Bordes redondeados en la parte superior derecha */
+	border-bottom-right-radius: 3px; /* Bordes redondeados en la parte inferior derecha */
+}
+
+/* Estilos para las imágenes de la portada y contraportada */
+#portada {
+	background: url('../IMAGES/Imagen-Portada.jpg'); /* Imagen de la portada */
+}
+#portada-back {
+	background: url('../IMAGES/Contraportada.jpg'); /* Imagen de la contraportada */
+}
+
+/* Asegura que las imágenes cubran todo el espacio disponible */
+#portada, #portada-back {
+	background-size: 100% 100%;
+}
+
+/* Efectos de transformación para el libro */
+.trnsf {
+	transform: translateX(80px); /* Mueve el libro 80px hacia la derecha */
+}
+.trnsf-reset {
+	transform: translateX(0px); /* Restaura la posición original */
+}
+
+/* Diseño responsivo para pantallas de tamaño medio */
+@media screen and (max-width: 800px) {
+	p {
+		font-size: 9px; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+	}
+}
+
+/* Estilo para el pie de página */
+footer {
+	width: 90%; /* 90% del ancho disponible */
+	margin: 0 auto; /* Centra el pie de página */
+	padding: 25px 10px; /* Espaciado interno */
+	display: flex; /* Usando flexbox */
+	justify-content: center; /* Centra el contenido horizontalmente */
+	align-items: center; /* Centra el contenido verticalmente */
+	text-align: center; /* Alineación del texto */
+	background-color: #555; /* Fondo gris */
+	color: #fff; /* Texto blanco */
+	overflow: auto; /* Asegura que no se desborde */
+	width: 100%; /* Ancho completo */
+	margin-top: auto; /* Empuja el pie de página hacia el final */
+}

@@ -1,0 +1,191 @@
+/* Estilo para el cuerpo de la página */
+body {
+  font-family: 'Arial', sans-serif;  /* Fuente de la página */
+  margin: 0;  /* Elimina los márgenes por defecto */
+  padding: 0;  /* Elimina el padding por defecto */
+  color: #333;  /* Color de texto principal */
+}
+
+.logo-container {
+  display: flex; /* Alinea el logo y el título en una fila */
+  align-items: center; /* Centra verticalmente el logo y el título */
+  padding-left: 20px; /* Añade un poco de espacio a la izquierda */
+  margin-bottom: -65px; /* Ajusta el margen inferior para acercar al navbar */
+}
+
+/* Estilo para el logo */
+.logo {
+  width: 80px; /* Mantiene el ancho del logo */
+  border-radius: 50%; /* Logo circular */
+  border: 2px solid #000; /* Borde negro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  margin-right: 15px; /* Espacio entre el logo y el título */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Efecto de hover en el logo */
+}
+
+
+/* Estilo para la barra de navegación */
+.navbar {
+  width: 100%;            /* Ocupa todo el ancho de la página */
+  background-color: #555; /* Color de fondo de la barra */
+  overflow: auto;         /* Asegura que los elementos no se desborden */
+  border-radius: 5px;     /* Bordes redondeados */
+}
+
+/* Estilo de los enlaces en la barra de navegación */
+.navbar a {
+  float: right;           /* Coloca los enlaces a la derecha */
+  padding: 25px;          /* Espaciado alrededor de los enlaces */
+  color: white;           /* Color de texto de los enlaces */
+  text-decoration: none;  /* Elimina el subrayado de los enlaces */
+  font-size: 15px;        /* Tamaño de la fuente */
+}
+
+/* Efecto de hover en los enlaces de la barra de navegación */
+.navbar a:hover {
+  background-color: #000; /* Cambia el color de fondo cuando se hace hover */
+}
+
+/* Estilo para los enlaces activos */
+.active {
+  background-color: #04AA6D; /* Color verde para el enlace activo */
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+  .navbar {
+    text-align: center;   /* Centra los enlaces en pantallas pequeñas */
+  }
+
+  .navbar a {
+    float: none;          /* Elimina el float para apilar los enlaces */
+    display: block;       /* Muestra los enlaces como bloques */
+    padding: 15px;        /* Ajusta el padding */
+    font-size: 14px;      /* Reduce el tamaño de la fuente */
+  }
+
+  /* Estilo del logo para pantallas medianas */
+  .logo {
+    position: absolute;
+    left: 20px;           /* Mantiene el logo a la izquierda */
+    top: 15px;            /* Ajusta la posición vertical */
+    transform: none;      /* Elimina la transformación */
+    width: 60px;          /* Reduce el tamaño del logo */
+  }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+  /* Estilo de los enlaces en pantallas muy pequeñas */
+  .navbar a {
+    padding: 10px;       /* Reduce el padding */
+    font-size: 12px;     /* Reduce aún más el tamaño de la fuente */
+  }
+
+  /* Estilo del logo en pantallas muy pequeñas */
+  .logo {
+    width: 50px;         /* Reduce el tamaño del logo */
+    left: 10px;          /* Ajusta el espacio desde el borde izquierdo */
+  }
+}
+
+/* Estilo para la sección "about" */
+.about {
+  text-align: center;    /* Centra el texto */
+  padding: 60px 20px;    /* Añade espacio alrededor */
+}
+
+/* Estilo del título en la sección "about" */
+.about h2 {
+  font-size: 2.5em;      /* Aumenta el tamaño del título */
+  margin-bottom: 20px;   /* Añade espacio debajo del título */
+}
+
+/* Estilo del divisor en la sección "about" */
+.about .divider {
+  width: 100px;          /* Ancho del divisor */
+  height: 2px;           /* Alto del divisor */
+  background-color: #a28f55; /* Color del divisor */
+  margin: 0 auto 20px auto; /* Centra el divisor */
+}
+
+/* Estilo del párrafo en la sección "about" */
+.about p {
+  text-align: justify;   /* Justifica el texto */
+  font-size: 1.2em;      /* Tamaño de la fuente */
+  line-height: 1.5;      /* Ajusta el interlineado */
+  color: #555;           /* Color del texto */
+}
+
+/* Estilo de las tarjetas */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Sombra alrededor de la tarjeta */
+  max-width: 300px;      /* Limita el ancho máximo */
+  margin: auto;          /* Centra la tarjeta */
+  text-align: center;    /* Centra el texto dentro de la tarjeta */
+  font-family: arial;    /* Fuente de la tarjeta */
+}
+
+/* Estilo del título dentro de las tarjetas */
+.title {
+  color: grey;           /* Color gris para el título */
+  font-size: 18px;       /* Tamaño de la fuente del título */
+}
+
+/* Estilo de la imagen en la sección "about" */
+.about-image {
+  width: 50%;            /* Establece el tamaño de la imagen */
+  height: 300px;         /* Ajusta la altura de la imagen */
+  margin: 20px 0;        /* Añade espacio alrededor de la imagen */
+  border-radius: 8px;    /* Redondea los bordes de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de la imagen */
+  border: 5px solid #000; /* Borde negro alrededor de la imagen */
+}
+
+/* Efecto de hover en la imagen de la sección "about" */
+.about-image:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+/* Estilo para las líneas horizontales */
+hr {
+  width: 100%;           /* Ancho completo */
+  border: 1px solid black; /* Borde negro */
+}
+
+/* Estilo para los botones */
+button {
+  border: none;          /* Elimina el borde del botón */
+  outline: 0;            /* Elimina el contorno del botón */
+  display: inline-block; /* Muestra el botón en línea */
+  padding: 8px;          /* Espaciado dentro del botón */
+  color: white;          /* Color de texto blanco */
+  background-color: #000; /* Fondo negro para el botón */
+  text-align: center;    /* Centra el texto dentro del botón */
+  cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+  width: 100%;           /* Hace que el botón ocupe todo el ancho */
+  font-size: 18px;       /* Tamaño de la fuente */
+}
+
+/* Efecto de hover en los botones */
+button:hover, a:hover {
+  opacity: 0.7;          /* Reduce la opacidad al hacer hover */
+}
+
+/* Estilo para el pie de página */
+footer {
+  padding: 25px 10px;    /* Espaciado dentro del pie de página */
+  display: flex;         /* Utiliza flexbox para alinear los elementos */
+  justify-content: center; /* Centra los elementos en el eje horizontal */
+  align-items: center;   /* Centra los elementos en el eje vertical */
+  text-align: center;    /* Centra el texto */
+  background-color: #555; /* Fondo gris del pie de página */
+  color: #fff;           /* Color del texto en blanco */
+  overflow: auto;        /* Asegura que los elementos no se desborden */
+  width: 100%;           /* Ocupa todo el ancho de la página */
+  margin-top: auto;      /* Asegura que el pie esté al final */
+}
